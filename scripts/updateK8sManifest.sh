@@ -1,7 +1,6 @@
-```bash
 #!/bin/bash
 set -e
-set -x
+set -o pipefail
 
 # Set the repository URL
 REPO_URL="<REDACTED>"
@@ -26,4 +25,3 @@ git push
 
 # Cleanup: remove the temporary directory
 rm -rf /tmp/temp_repo
-```
