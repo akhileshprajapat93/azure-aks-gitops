@@ -1,6 +1,6 @@
 ```bash
 #!/bin/bash
-
+set -e
 set -x
 
 # Set the repository URL
