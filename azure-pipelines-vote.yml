@@ -56,6 +56,10 @@ stages:
   - job: Update
     displayName: Update Manifest
     steps:
+    - bash: |
+       sed -i 's/\r$//' scripts/updateK8sManifest.sh
+       chmod +x scripts/updateK8sManifest.sh'
+      displayName: 'Fix shell script line endings'
     - task: ShellScript@2
       inputs:
         scriptPath: 'scripts/updateK8sManifest.sh'
