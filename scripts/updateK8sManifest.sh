@@ -13,7 +13,7 @@ git clone "$REPO_URL" /tmp/temp_repo
 cd /tmp/temp_repo
 
 # Update the Kubernetes manifest image
-sed -i "s|image:.*|image: akhileshazcicd/$2:$3|g" "k8s-specifications/$1-deployment.yaml"
+sed -i "s|image:.*|image: akhileshazcicd.azurecr.io/$2:$3|g" "k8s-specifications/$1-deployment.yaml"
 
 # Add the modified files
 git add .
