@@ -50,7 +50,7 @@ kubectl delete -f k8s-specifications/
 
 ## Architecture
 
-![Architecture diagram](architecture.excalidraw.png)
+![Architecture diagram](Architectcure.png)
 
 * A front-end web app in [Python](/vote) which lets you vote between two options
 * A [Redis](https://hub.docker.com/_/redis/) which collects new votes
