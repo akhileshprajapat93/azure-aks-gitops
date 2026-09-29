@@ -1,4 +1,6 @@
-# Example Voting App
+# azure-aks-gitops
+End-to-end DevOps project demonstrating CI/CD with Azure DevOps, Docker, Azure Container Registry (ACR), Azure Kubernetes Service (AKS), and Argo CD GitOps deployment.
+
 
 A simple distributed application running across multiple Docker containers.
 
