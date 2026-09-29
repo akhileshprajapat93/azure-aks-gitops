@@ -49,3 +49,22 @@ stages:
         repository: '$(imageRepository)'
         command: 'push'
         tags: '$(tag)'
+
+- stage: Update
+  displayName: update 
+  jobs:
+  - job: Update
+    displayName: Update Manifest
+    steps:
+    
+    - task: Bash@3
+      displayName: Fix shell script line endings
+      inputs:
+        targetType: 'inline'
+        script: |
+          sed -i 's/\r$//' scripts/updateK8sManifest.sh
+          chmod +x scripts/updateK8sManifest.sh
+    - task: ShellScript@2
+      inputs:
+        scriptPath: 'scripts/updateK8sManifest.sh'
+        args: 'result $(imageRepository) $(tag)'
